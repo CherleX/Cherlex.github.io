@@ -2,8 +2,8 @@
 layout: post
 title:  "LeetCode 101. Symmetric Tree"
 date:   2016-09-04 14:12:26
-categories: Leetcode
-tags: Leetcode Tree
+categories: LeetCode
+tags: LeetCode Tree
 ---
 
 * content
