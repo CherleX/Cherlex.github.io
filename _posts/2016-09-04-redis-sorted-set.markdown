@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "使用Redis Sorted Set 实现优先队列"
-date:   2016-09-04 14:12:26
+date:   2016-09-05 17:12:26
 categories: Redis
 tags: Redis Sorted-Set
 ---
 
 * content
 {:toc}
-判断二叉树是否对称。
+计算权重的算法，以及Sorted Setd 的使用方法。
 
 
 # 优先级队列需求 #
