@@ -1,3 +1,16 @@
+---
+layout: post
+title:  "使用Redis Sorted Set 实现优先队列"
+date:   2016-09-04 14:12:26
+categories: Redis
+tags: Redis Sorted-Set
+---
+
+* content
+{:toc}
+判断二叉树是否对称。
+
+
 # 优先级队列需求 #
 - 用户发起任务会指定一个权重，权重越大优先级越高
 - 权重相等的任务，时间越早优先级越高
