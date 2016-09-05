@@ -1,3 +1,14 @@
+---
+layout: post
+title:  "maxnum depth of binary tree"
+categories: LeetCode
+tags:  LeetCode Tree
+---
+
+* content
+{:toc}
+二叉树最大高度
+
 # [LeetCode 104 Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) #
 
 
