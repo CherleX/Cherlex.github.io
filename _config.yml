@@ -7,7 +7,7 @@
 
 # Site settings
 title: zhyh
-brief-intro: 手工艺人
+brief-intro: 编程拾遗
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cherlex.github.io/" # the base hostname & protocol for your site
 
@@ -23,7 +23,7 @@ zhihu_username:
 linkedIn_username: 
 dribbble_username:
 
-description_footer: 手工艺人的自我修养！
+description_footer: 踏破铁鞋无觅处，得来全不费工夫。
 
 # comments
 # two ways to comment, only choose one, and use your own short name
