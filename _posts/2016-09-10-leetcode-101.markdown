@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "LeetCode 226.Invert Binary Tree"
+date:   2016-09-010 16:12:26
+categories: LeetCode
+tags: LeetCode Tree
+---
+
+
+
+* content
+{:toc}
+翻转二叉树。
+
+
+
+
+# [LeetCode 226.Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) #
+
+> Invert a binary tree.
+
+```
+     4
+   /   \
+  2     7
+ / \   / \
+1   3 6   9
+```
+> to
+
+```
+     4
+   /   \
+  7     2
+ / \   / \
+9   6 3   1
+```
+
+# 分析 #
+翻转二叉树，可以使用递归法解决。
+
+
+```python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def invertTree(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if root:
+            root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+        return root
+                
+```
