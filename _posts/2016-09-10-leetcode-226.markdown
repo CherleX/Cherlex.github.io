@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "LeetCode 226.Invert Binary Tree"
-date:   2016-09-010 16:12:26
+date:   2016-09-10 16:12:26
 categories: LeetCode
 tags: LeetCode Tree
 ---
