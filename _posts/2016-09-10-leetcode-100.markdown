@@ -45,3 +45,33 @@ class Solution(object):
         return p == q
                 
 ```
+# BFS # 
+> 可以使用一个queue来存储子节点，每遍历一个节点，就把子节点（n1,n2）存到queue，然后每次从queue去一对节点来比较。
+
+```python
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def isSameTree(self, p, q):
+        queue = [(p,q)]
+        while queue:
+            n1,n2 = queue.pop(0)
+            if n1 and n2:
+                if n1.val != n2.val:
+                    return False
+                queue += [(n1.left, n2.left), (n1.right, n2.right)]
+            elif n1 or n2:
+                return False
+            else:
+                continue
+
+        return True
+
+
+        
+```
