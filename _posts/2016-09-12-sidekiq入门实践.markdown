@@ -1,0 +1,86 @@
+---
+layout: post
+title:  " sSdekiq 入门实践"
+date:   2016-09-12 14:47:26
+categories: Sidekiq
+tags: Ruby Sidekiq
+---
+
+* content
+{:toc}
+ sidekiq 入门实践
+
+
+
+
+
+# 定义模板类
+
+```ruby
+#time_estimate_worker_template.rb
+require 'sidekiq'
+
+#sidekiq后台任务模板类，具体任务在time_estimate_worker
+module Earthworm
+  module Worker
+    class TimeEstimateWorker
+      include Sidekiq::Worker
+      sidekiq_options queue: 'hlt_time_estimate'
+
+      def perform(hlt_id, task_param_id, ayc_task_id)
+      end
+    end
+
+  end
+end
+
+```
+
+
+
+# 定义具体执行类
+
+```ruby
+#time_estimate_worker.rb
+require 'sidekiq'
+require 'redis'
+
+require_relative 'time_estimate_worker_template'
+
+redis_url = 'redis://localhost:6379/0'
+unless ENV['REDIS_URL'].to_s.empty?
+  redis_url = ENV['REDIS_URL']
+end
+
+Sidekiq.configure_server do |config|
+  config.redis = {url: redis_url, network_timeout: 5}
+end
+
+Sidekiq.configure_client do |config|
+  config.redis = {url: redis_url, network_timeout: 5}
+end
+
+
+#时间估算，sidekiq后台任务具体实现类
+module Earthworm
+  module Worker
+    class TimeEstimateWorker
+      include Sidekiq::Worker
+      sidekiq_options queue: 'hlt_time_estimate', retry: false
+
+      def perform(hlt_id, task_param_id, ayc_task_id)
+        puts("TimeEstimater:hlt-id: #{hlt_id}")
+      end
+    end
+  end
+end
+```
+
+
+
+# 后台任务执行
+
+```cmd
+sidekiq -r time_estimate_worker.rb -q hlt_time_estimate
+```
+
