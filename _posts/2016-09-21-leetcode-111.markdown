@@ -1,0 +1,83 @@
+---
+layout: post
+title:  "LeetCode 111. Minimum Depth of Binary Tree"
+date:   2016-09-20 15:17:26
+categories: LeetCode
+tags: LeetCode Tree
+---
+
+* content
+{:toc}
+求二叉树的最小高度。
+
+
+
+
+# [LeetCode 111. Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) #
+
+> Given a binary tree, find its minimum depth.
+
+> The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+
+
+# recursive #
+
+
+
+```ruby
+# Definition for a binary tree node.
+# class TreeNode
+#     attr_accessor :val, :left, :right
+#     def initialize(val)
+#         @val = val
+#         @left, @right = nil, nil
+#     end
+# end
+
+# @param {TreeNode} root
+# @return {Integer}
+def min_depth(root)
+  return 0 if root.nil?
+  return 1 + min_depth(root.left) if root.right.nil?
+  return 1 + min_depth(root.right) if root.left.nil?
+  return 1 + [min_depth(root.left), min_depth(root.right)].min
+
+end
+```
+
+
+# DFS #
+
+```ruby
+# Definition for a binary tree node.
+# class TreeNode
+#     attr_accessor :val, :left, :right
+#     def initialize(val)
+#         @val = val
+#         @left, @right = nil, nil
+#     end
+# end
+
+# @param {TreeNode} root
+# @return {Integer}
+def min_depth(root)
+  return 0 if root.nil?
+  queue = Queue.new
+  queue.push(root)
+  i = 0
+  while !queue.empty?
+    i += i
+    count = queue.size
+    count.times do
+      front = queue.pop
+      queue.push(front.left) unless front.left.nil?
+      queue.push(front.right) unless front.right.nil?
+      if front.left.nil? && front.right.nil?
+        return i
+      end
+    end
+  end
+  return -1
+
+end
+```
