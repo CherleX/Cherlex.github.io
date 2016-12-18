@@ -12,7 +12,8 @@ tags: Programer 修炼
 
 
 
-# 上篇--能力进阶攻略  # [程序员能力矩阵](http://www.indiangeek.net/wp-content/uploads/Programmer%20competency%20matrix.htm) 
+# 上篇--能力进阶攻略  
+## [程序员能力矩阵](http://www.indiangeek.net/wp-content/uploads/Programmer%20competency%20matrix.htm) 
 ### 计算机科学 Computer Science  
 ||||||| 
 | ---- | ---- | ----- | ---- | ---- | ---- |
