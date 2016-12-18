@@ -16,6 +16,12 @@ tags: Programer 修炼
 ## [程序员能力矩阵](http://www.indiangeek.net/wp-content/uploads/Programmer%20competency%20matrix.htm) 
 ### 计算机科学 Computer Science
 
+字符 | 含义
+--- | ---
+`|` | 选择，匹配的是该符号左边的子表达式或右边的子表达式
+`(...)` | 组合，将几个项组合为一个单元，这个单元可通过`*` `+` `?` `|` 等符号加以修饰，**而且可以记住和这个组合相匹配的字符串以提供伺候的引用使用**
+`(?:...)` | 只组合，把项组合到一个段元，但不记忆与该组相匹配的字符
+`\n` | 和第n个分组第一次匹配的字符相匹配，组是圆括号中的子表达式（也有可能是嵌套的），组索引是从左到右的左括号数，`(?:`形式的分组不编码
 |test|test|test|test|test|test|
 | ---- | ---- | ----- | ---- | ---- | ---- |
 |      | 2n (Level 0)| n2 (Level 1)| n (Level 2)| log(n) (Level 3)| Comments|
