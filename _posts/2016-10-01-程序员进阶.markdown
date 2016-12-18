@@ -16,9 +16,9 @@ tags: Programer 修炼
 ## [程序员能力矩阵](http://www.indiangeek.net/wp-content/uploads/Programmer%20competency%20matrix.htm) 
 ### 计算机科学 Computer Science
 
-||||||| 
+|test|test|test|test|test|test|
 | ---- | ---- | ----- | ---- | ---- | ---- |
-|      | 2n (Level 0)| n2 (Level 1)| n (Level 2)| log(n) (Level 3)| Comments| 
+|      | 2n (Level 0)| n2 (Level 1)| n (Level 2)| log(n) (Level 3)| Comments|
 | 数据结构 | 不知道数组和链表的差异| 能够解释和使用数组，链表，字典等，并且能够用于实际的编程任务。| 了解基本数据结构时间和空间的折中，比如数组vs 链表，能够解释如何实现哈希表和处理冲突，了解优先队列及其实现。 | 高等的数据结构的知识，比如B-树、二项堆、斐波那契堆、AVL树、红黑树、伸展树、跳跃表以及前缀树等。 || 
 | 算法   | 不能够找出一个数组各数的平均值(这令人难以置信，但是我的确在应聘者中遇到过) | 基本的排序，搜索和数据的遍历和检索算法。                     | 树，图，简单的贪婪算法和分而治之算法，能够适度了解矩阵该层的含义。        | 能够辨识和编写动态规划方案，良好的图算法知识，良好的数值估算的知识，能够辨别NP问题等。 | Working with someone who has a good topcoder ranking would be an unbelievable piece of luck! | 
 | 编程体系 | 不知道何为编译器、链接器和解释器。                      | 对编译器、链接器、解释器有基本的了解。知道什么是汇编代码以及在硬件层如何工作。有一些虚拟内存和分页知识。 | 了解内核模式vs用户模式,多线程，同步原语以及它们如何实现，能够阅读汇编代码。了解网络如何工作，了解网络协议和socket级别编程。 | 了解整个程序堆栈、硬件(CPU+内存+中断+微码)、二进制代码、汇编、静态和动态链接、编码、解释、JIT（just-in-time）编译、内存碎片回收、堆、栈、存储器编址… |                                          |    
